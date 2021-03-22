@@ -1,0 +1,327 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* variables */
+
+:root {
+    --white: #E9F1F7;
+    --black: #0D1F2D;
+    --orange: #a87553;
+    --lightyellow: #FFCF99;
+    --red: #984447;
+    --blue: #0F5880;
+    
+    --title: "Josefin Sans", sans-serif;
+    --body: "Open Sans", sans-serif;
+}
+
+
+/* universals */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-family: var(--body);
+    color: var(--black);
+    background-color: var(--white);
+}
+
+/* top navigation bar */
+
+#topnav {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--black);
+    color: var(--white);
+    height: 50px;
+    font-family: var(--title);
+}
+
+#topnav ul {
+    width: 33%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+#topnav a, #topnav a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#topnav a:hover {
+    color: var(--orange);
+}
+
+#topnav ul > li {
+    display: inline;
+}
+
+/* header */
+
+header {
+    background-image: url("./images/header.jpg");
+    background-color: var(--black);
+    background-size: 105%;
+    background-position: 42% 21%;
+    padding: 13%;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--title);
+    font-weight: 700;
+}
+
+header h1 {
+    color: var(--white);
+    width: 100%;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+/* bio */
+
+#bio {
+    width: 50%;
+    margin: 5% auto;
+    text-align: justify;
+    max-width: 750px;
+}
+
+/* listen on services X, Y, Z */
+
+#listen-on {
+    width: 100%;
+}
+
+#listen-on ul {
+    width: 66%;
+    max-width: 450px;
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    font-family: var(--title);
+    font-size: 1.2em;
+}
+
+#listen-on a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+#listen-on a:hover {
+    text-decoration: underline;
+    color: var(--orange);
+}
+
+/* music */
+
+#music {
+    width: 75%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--title);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#latest {
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+#albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8%;
+}
+
+.album-embed {
+    margin: 20px;
+}
+
+/* live dates */
+
+#live {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+#shows-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.live-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    width: 33%;
+    min-width: 200px;
+    max-width: 350px;
+    margin: 2%;
+    padding: 2% 4%;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6em;
+    border-radius: 5px;
+}
+
+.live-show a, .live-show a:visited {
+    color: var(--orange);
+}
+
+.live-show a:hover {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.live-date {
+    font-weight: 500;
+}
+
+.live-venue {
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.live-city {
+    font-weight: 400;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    position: absolute;
+    height: 150px;
+    margin-top: 100px;
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer ul {
+    width: 16%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+footer ul > li {
+    display: inline;
+    list-style: none;
+}
+
+footer img {
+    height: 32px;
+    width: auto;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* responsive styles for mobile devices & smaller screens */
+
+@media only screen and (max-width: 930px) {
+    #topnav {
+        display: none;
+    }
+
+    header {
+        margin-top: 0;
+        padding: 5% 0; 
+    }
+
+    header h1 {
+        width: 90%;
+        margin: auto;
+        font-size: 3em;
+    }
+
+    #bio {
+        display: none;
+    }
+
+    #listen-on {
+        width: 95%;
+        padding: 3%;
+    }
+
+    #listen-on ul {
+        font-size: 1em;
+        width: 80%;
+        max-width: 350px;
+        margin: 6% auto;
+    }
+
+    #listen-on a {
+        color: var(--white);
+        background-color: var(--black);
+        padding: 5%;
+        border-radius: 5px;
+    }
+    
+    #listen-on a:hover {
+        text-decoration: none;
+    }
+
+    #music {
+        width: 90%;
+    }
+
+    #albums {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #shows-container {
+        width: 95%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .live-show {
+        width: 100%;
+        margin: 2% auto;
+    }
+
+    footer {
+        height: 150px;
+        margin: 5% 0;
+        padding: 5% 0;
+    }
+
+    footer ul {
+        width: 33%;
+        min-width: 250px;
+    }
+}
