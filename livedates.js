@@ -13,6 +13,8 @@ if you want to add another one, copy-paste this thing and write the things betwe
     link: "http://buytickets.link/blahblahblah"
 },
 
+and if you want to delete one, just... delete it between the curly braces (and the comma)
+
 Your pal,
 Jamie
 xoxo
